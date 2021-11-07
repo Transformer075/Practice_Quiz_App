@@ -90,11 +90,14 @@ public class activity_second extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(activity_second.this, FirstActivity.class);
+                startActivity(intent);
             }
         });
     }
     public void call_Activity4(View view){
-
+        Intent intent = new Intent(activity_second.this, activity_four.class);
+        intent.putExtra("id", view.getId());
+        startActivity(intent);
     }
 }
