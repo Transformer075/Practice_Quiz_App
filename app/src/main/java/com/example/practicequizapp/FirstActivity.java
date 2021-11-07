@@ -2,6 +2,7 @@ package com.example.practicequizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.Image;
 import android.os.Bundle;
 
 public class FirstActivity extends AppCompatActivity {
@@ -10,5 +11,8 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+
+
+
     }
 }
