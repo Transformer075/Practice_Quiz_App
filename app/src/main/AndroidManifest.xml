@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeQuizApp">
         <activity
+            android:name=".activity_second"
+            android:exported="false" />
+        <activity
             android:name=".FirstActivity"
             android:exported="true">
             <intent-filter>
