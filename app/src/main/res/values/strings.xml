@@ -4,4 +4,22 @@
     <string name="textViewRollNo">Roll No: BSEF18A512</string>
     <string name="secondActivity">Practice</string>
     <string name="thirdActivity">Quiz</string>
+    <string name="title">Makharij Al-Huruf</string>
+    <string name="defination">Makhaarij Al-Huroof translates to “the points of articulation for [the Arabic] letters”. There are 17 emission points
+        (makhārij al-ḥurūf), located in various regions of:</string>
+    <string name="defination2"> Throat,Tongue, Lips, Nose, Mouth</string>
+    <string name="defination3">Below shows a preview of the Makharij and Articulation points from where the the
+29 Arabic letters are produced.</string>
+    <string name="name1">Makharij 1-3(Halqiyah)</string>
+    <string name="name2">Makharij 4-5(Lahatiyah)</string>
+    <string name="name3">Makharij 6-7(Shajariyah-Haafiyah)</string>
+    <string name="name4">Makharij 8-10(Tarfiyah)</string>
+    <string name="name5">Makharij 11(Nit-eeyah)</string>
+    <string name="name6">Makharij 12(Lisaveyah)</string>
+    <string name="name7">Makharij 13</string>
+    <string name="name8">Makharij 14(Ghunna)</string>
+    <string name="name9">Makharij 15-16</string>
+    <string name="name10">Makharij 17</string>
+    <string name="btn_back">Back</string>
+
 </resources>
