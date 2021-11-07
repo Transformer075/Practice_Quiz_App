@@ -2,5 +2,5 @@
     <string name="app_name">Practice &amp; Quiz App</string>
     <string name="textViewName">Name: Haseeb Ur Rehman</string>
     <string name="textViewRollNo">Roll No: BSEF18A512</string>
-
+    <string name="secondActivity">Second Activity</string>
 </resources>
