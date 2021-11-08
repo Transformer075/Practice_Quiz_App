@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeQuizApp">
         <activity
+            android:name=".activity_QuizQuestion4"
+            android:exported="false" />
+        <activity
             android:name=".activity_QuizQuestion3"
             android:exported="false" />
         <activity

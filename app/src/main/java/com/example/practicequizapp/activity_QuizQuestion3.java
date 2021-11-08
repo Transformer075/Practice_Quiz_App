@@ -13,8 +13,6 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class activity_QuizQuestion3 extends AppCompatActivity {
-    String[] categoryArray = {"Halqiyah", "Lahatiyah", "Shajariyah-Haafiyah", "Tarfiyah", "Nit-eeyah", "Lisaveyah"
-            , "Ghunna"};
     String[] arabicLetters = {"أ ہ","ع ح","غ خ","ق","ک","ج ش ی","ض","ل","ن","ر","ت د ط","ظ  ذ  ث","ص ز س","م ن","ف","ب","م","و","باَ بوُ بىِ"};
     String[] soundProducedFrom = {"End of Throat", "Middle of Throat", "Start of the Throat", "Base of Tongue which" +
             "is near Uvula touching the mouth roof", "Portion of Tongue near its base touching the roof of mouth",
@@ -71,9 +69,9 @@ public class activity_QuizQuestion3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //Intent intent2 = new Intent(activity_QuizQuestion3.this, activity_QuizQuestion3.class);
-                //intent2.putExtra("correctAnswerCount4", correctAnswerCount3);
-                //startActivity(intent2);
+                Intent intent2 = new Intent(activity_QuizQuestion3.this, activity_QuizQuestion4.class);
+                intent2.putExtra("correctAnswerCount4", correctAnswerCount3);
+                startActivity(intent2);
             }
         });
     }
