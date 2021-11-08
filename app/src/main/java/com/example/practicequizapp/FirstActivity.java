@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ public class FirstActivity extends AppCompatActivity {
 
     Button btn_Practice;
     Button btn_Quiz;
-
+    Button btn_repo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class FirstActivity extends AppCompatActivity {
 
         btn_Practice = findViewById(R.id.btn_secondActivity);
         btn_Quiz = findViewById(R.id.btn_thirdActivity);
-
+        btn_repo = findViewById(R.id.btn_repo);
         Intent intent;
         btn_Practice.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +35,14 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+            }
+        });
+        btn_repo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri webpage = Uri.parse("https://github.com/Transformer075/Practice_Quiz_App");
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(intent);
             }
         });
 
