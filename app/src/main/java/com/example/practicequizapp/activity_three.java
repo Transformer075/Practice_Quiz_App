@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -30,7 +29,7 @@ public class activity_three extends AppCompatActivity {
     "Inner part of the both lips touch each other", "Outer part of both lips touch each other",
     "Rounding both lips and not closing the mouth", "Mouth empty space while speaking words like  باَ بوُ بىِ"};
 
-    TextView statement;
+    TextView statementView;
     RadioButton btn_radio1, btn_radio2, btn_radio3;
     RadioGroup radioGroup;
     Button btn_next1;
@@ -41,7 +40,7 @@ public class activity_three extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_three);
 
-        statement = findViewById(R.id.statementView);
+        statementView = findViewById(R.id.statementView);
         btn_radio1 = findViewById(R.id.btn_radio1);
         btn_radio2 = findViewById(R.id.btn_radio2);
         btn_radio3 = findViewById(R.id.btn_radio3);
@@ -51,7 +50,7 @@ public class activity_three extends AppCompatActivity {
         Random rand = new Random();
         randomNumber = rand.nextInt(19);
 
-        statement.setText("Which Arabic letters produce sound from " + soundProducedFrom[randomNumber] + "?");
+        statementView.setText("Which Arabic letters produce sound from " + soundProducedFrom[randomNumber] + "?");
         btn_radio1.setText(arabicLetters[randomNumber]);
         if(randomNumber > 1){
             btn_radio2.setText(arabicLetters[randomNumber - 1]);
@@ -70,7 +69,7 @@ public class activity_three extends AppCompatActivity {
         btn_next1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity_three.this, activity_five.class);
+                Intent intent = new Intent(activity_three.this, activity_QuizQuestion2.class);
                 intent.putExtra("correctAnswerCount", correctAnswersCount);
                 startActivity(intent);
             }
