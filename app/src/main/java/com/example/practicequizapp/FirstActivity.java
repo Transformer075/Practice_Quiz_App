@@ -34,7 +34,8 @@ public class FirstActivity extends AppCompatActivity {
         btn_Quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(FirstActivity.this, activity_three.class);
+                startActivity(intent);
             }
         });
         btn_repo.setOnClickListener(new View.OnClickListener() {
