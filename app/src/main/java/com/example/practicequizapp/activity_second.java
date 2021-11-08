@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.Console;
+
 public class activity_second extends AppCompatActivity {
 
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn_back;
@@ -72,7 +74,7 @@ public class activity_second extends AppCompatActivity {
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                call_Activity4(v);
             }
         });
         btn9.setOnClickListener(new View.OnClickListener() {
@@ -96,8 +98,44 @@ public class activity_second extends AppCompatActivity {
         });
     }
     public void call_Activity4(View view){
+        String value;
+        switch (view.getId()){
+            case R.id.btn1:
+                value = "image1";
+                break;
+            case R.id.btn2:
+                value = "image2";
+                break;
+            case R.id.btn3:
+                value = "image3";
+                break;
+            case R.id.btn4:
+                value = "image4";
+                break;
+            case R.id.btn5:
+                value = "image5";
+                break;
+            case R.id.btn6:
+                value = "image6";
+                break;
+            case R.id.btn7:
+                value = "image7";
+                break;
+            case R.id.btn8:
+                value = "image8";
+                break;
+            case R.id.btn9:
+                value = "image9";
+                break;
+            case R.id.btn10:
+                value = "image10";
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + view.getId());
+
+        }
         Intent intent = new Intent(activity_second.this, activity_four.class);
-        intent.putExtra("id", view.getId());
+        intent.putExtra("id", value);
         startActivity(intent);
     }
 }
