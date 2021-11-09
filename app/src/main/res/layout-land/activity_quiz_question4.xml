@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF153250"
+    tools:context=".activity_QuizQuestion4">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/quiz"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/Question4"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <ImageView
+        android:id="@+id/textViewImage"
+        android:layout_width="177dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:srcCompat="@drawable/qimage0" />
+
+    <TextView
+        android:id="@+id/imageStatement"
+        android:layout_width="107dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewImage"
+        app:layout_constraintStart_toEndOf="@+id/textViewImage"
+        app:layout_constraintTop_toTopOf="@+id/textViewImage" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="328dp"
+        android:layout_height="161dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+        <RadioButton
+            android:id="@+id/btn_radio4_1"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked4"
+            android:text="RadioButton"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/btn_radio4_2"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked4"
+            android:text="RadioButton"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/btn_radio4_3"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked4"
+            android:text="RadioButton"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_result"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onRadioButtonClicked4"
+        android:text="@string/btn_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
