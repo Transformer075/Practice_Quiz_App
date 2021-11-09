@@ -23,8 +23,8 @@
     <string name="btn_back">Back</string>
     <string name="btn_repo">Go to My Repository</string>
     <string name="quiz">Quiz</string>
-    <string name="quiz_info">Instructions:There are total 5 Mcqs you need to attempt. Every option will have 3 multiple choices and
-    you need to select one option.</string>
+    <string name="quiz_info">Instructions:There are total 4 Mcqs you need to attempt. Every option will have 3 multiple choices and
+    you can select one option only once.</string>
     <string name="Question1">Question1</string>
     <string name="Question2">Question2</string>
     <string name="Question3">Question3</string>

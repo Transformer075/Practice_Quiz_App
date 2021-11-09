@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF153250"
     tools:context=".activity_QuizQuestion3">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_marginTop="44dp"
         android:text="@string/quiz"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="23dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -25,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="@string/Question3"
+        android:textColor="@color/white"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -37,6 +40,7 @@
         android:layout_height="61dp"
         android:layout_marginTop="36dp"
         android:text="TextView"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -56,21 +60,24 @@
             android:layout_width="139dp"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked3"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textColor="@color/white" />
 
         <RadioButton
             android:id="@+id/btn_radio3_2"
             android:layout_width="139dp"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked3"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textColor="@color/white" />
 
         <RadioButton
             android:id="@+id/btn_radio3_3"
             android:layout_width="139dp"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked3"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textColor="@color/white" />
     </RadioGroup>
 
     <Button
