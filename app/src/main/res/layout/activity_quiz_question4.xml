@@ -66,18 +66,21 @@
             android:id="@+id/btn_radio4_1"
             android:layout_width="139dp"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked4"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/btn_radio4_2"
             android:layout_width="139dp"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked4"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/btn_radio4_3"
             android:layout_width="139dp"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked4"
             android:text="RadioButton" />
     </RadioGroup>
 

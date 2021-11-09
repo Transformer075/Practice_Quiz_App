@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -32,6 +33,7 @@ public class activity_QuizQuestion3 extends AppCompatActivity {
     Button btn_next4;
     int correctAnswerCount3 = 0;
     int randomNumber3;
+    boolean go3 = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,7 @@ public class activity_QuizQuestion3 extends AppCompatActivity {
 
         Intent intent1 = getIntent();
         correctAnswerCount3 = intent1.getIntExtra("correctAnswerCount3", 0);
+        Log.d("T1", "onClick: value received from 2" + correctAnswerCount3);
 
         statementView3 = findViewById(R.id.statementView3);
         btn_radio3_1 = findViewById(R.id.btn_radio3_1);
@@ -68,31 +71,24 @@ public class activity_QuizQuestion3 extends AppCompatActivity {
         btn_next4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent2 = new Intent(activity_QuizQuestion3.this, activity_QuizQuestion4.class);
-                intent2.putExtra("correctAnswerCount4", correctAnswerCount3);
-                startActivity(intent2);
+                if(go3){
+                    Intent intent2 = new Intent(activity_QuizQuestion3.this, activity_QuizQuestion4.class);
+                    intent2.putExtra("correctAnswerCount4", correctAnswerCount3);
+                    Log.d("T1", "onClick: value send to 4" + correctAnswerCount3);
+                    startActivity(intent2);
+                }
             }
         });
     }
 
     public void onRadioButtonClicked3(View view) {
-        boolean checked3 = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.btn_radio3_1:
-                if (checked3 && arabicLetters[randomNumber3] == btn_radio3_1.getText())
-                    correctAnswerCount3++;
-                break;
-            case R.id.btn_radio3_2:
-                if (checked3 && arabicLetters[randomNumber3] == btn_radio3_2.getText())
-                    correctAnswerCount3++;
-                break;
-            case R.id.btn_radio3_3:
-                if (checked3 && arabicLetters[randomNumber3] == btn_radio3_3.getText())
-                    correctAnswerCount3++;
-                break;
-        }
+        Integer answer3 = view.getId();
+        btn_radio3_1.setEnabled(false);
+        btn_radio3_2.setEnabled(false);
+        btn_radio3_3.setEnabled(false);
+        go3 = true;
+        RadioButton radio3 = findViewById(answer3);
+        if(arabicLetters[randomNumber3].equals(radio3.getText().toString()))
+            correctAnswerCount3++;
     }
 }

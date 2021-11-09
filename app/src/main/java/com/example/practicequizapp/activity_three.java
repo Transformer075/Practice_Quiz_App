@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -35,6 +36,7 @@ public class activity_three extends AppCompatActivity {
     Button btn_next1;
     int correctAnswersCount = 0;
     int randomNumber;
+    boolean go = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,31 +71,29 @@ public class activity_three extends AppCompatActivity {
         btn_next1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity_three.this, activity_QuizQuestion2.class);
-                intent.putExtra("correctAnswerCount", correctAnswersCount);
-                startActivity(intent);
+                if(go == true){
+                    Intent intent = new Intent(activity_three.this, activity_QuizQuestion2.class);
+                    intent.putExtra("correctAnswerCount", correctAnswersCount);
+                    Log.d("T1", "onClick: value send to 2" + correctAnswersCount);
+                    startActivity(intent);
+                }
+
             }
         });
 
-
     }
     public void onRadioButtonClicked(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
+        Integer answer = view.getId();
+        btn_radio1.setEnabled(false);
+        btn_radio2.setEnabled(false);
+        btn_radio3.setEnabled(false);
+        go = true;
+        RadioButton radio = findViewById(answer);
 
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.btn_radio1:
-                if (checked && arabicLetters[randomNumber] == btn_radio1.getText())
-                    correctAnswersCount++;
-                    break;
-            case R.id.btn2:
-                if (checked && arabicLetters[randomNumber] == btn_radio2.getText())
-                    correctAnswersCount++;
-                    break;
-            case R.id.btn3:
-                if (checked && arabicLetters[randomNumber] == btn_radio3.getText())
-                    correctAnswersCount++;
-                    break;
+        if(arabicLetters[randomNumber].equals(radio.getText().toString())){
+            correctAnswersCount++;
+            Log.d("T1", "value" + correctAnswersCount);
         }
+
     }
 }
