@@ -11,6 +11,7 @@
         android:title="@string/quiz" />
     <item
         android:id="@+id/homeButton"
+        android:title=""
         android:icon="@drawable/ic_baseline_home_24"
         app:showAsAction="ifRoom" />
 </menu>
