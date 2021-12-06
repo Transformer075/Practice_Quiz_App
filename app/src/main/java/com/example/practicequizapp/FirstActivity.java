@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
@@ -25,6 +26,7 @@ public class FirstActivity extends AppCompatActivity {
         btn_Quiz = findViewById(R.id.btn_thirdActivity);
         btn_repo = findViewById(R.id.btn_repo);
         toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Intent intent;
         btn_Practice.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,5 +52,10 @@ public class FirstActivity extends AppCompatActivity {
         });
 
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 }
