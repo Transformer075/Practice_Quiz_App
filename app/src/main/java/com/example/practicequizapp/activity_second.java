@@ -1,6 +1,8 @@
 package com.example.practicequizapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import java.io.Console;
 public class activity_second extends AppCompatActivity {
 
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn_back;
+    Toolbar toolbar1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +32,11 @@ public class activity_second extends AppCompatActivity {
         btn10 = findViewById(R.id.btn10);
         btn_back = findViewById(R.id.btn_back);
 
+        toolbar1 = findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar1);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

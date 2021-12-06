@@ -11,24 +11,31 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
             android:name=".activity_result"
+            android:parentActivityName="com.example.practicequizapp.FirstActivity"
             android:exported="false" />
         <activity
             android:name=".activity_QuizQuestion4"
+            android:parentActivityName="com.example.practicequizapp.FirstActivity"
             android:exported="false" />
         <activity
             android:name=".activity_QuizQuestion3"
+            android:parentActivityName="com.example.practicequizapp.FirstActivity"
             android:exported="false" />
         <activity
             android:name=".activity_QuizQuestion2"
+            android:parentActivityName="com.example.practicequizapp.FirstActivity"
             android:exported="false" />
         <activity
             android:name=".activity_three"
+            android:parentActivityName="com.example.practicequizapp.FirstActivity"
             android:exported="false" />
         <activity
             android:name=".activity_four"
+            android:parentActivityName="com.example.practicequizapp.FirstActivity"
             android:exported="false" />
         <activity
             android:name=".activity_second"
+            android:parentActivityName="com.example.practicequizapp.FirstActivity"
             android:exported="false" />
         <activity
             android:name=".FirstActivity"

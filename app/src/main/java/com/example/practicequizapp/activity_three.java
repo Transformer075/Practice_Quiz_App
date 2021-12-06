@@ -1,6 +1,8 @@
 package com.example.practicequizapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -37,6 +39,8 @@ public class activity_three extends AppCompatActivity {
     int correctAnswersCount = 0;
     int randomNumber;
     boolean go = false;
+
+    Toolbar toolbar3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,12 @@ public class activity_three extends AppCompatActivity {
         btn_radio3 = findViewById(R.id.btn_radio3);
         btn_next1 = findViewById(R.id.btn_next1);
         radioGroup = findViewById(R.id.radioGroup);
+
+        toolbar3 = findViewById(R.id.toolbar3);
+        setSupportActionBar(toolbar3);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
 
         Random rand = new Random();
         randomNumber = rand.nextInt(19);

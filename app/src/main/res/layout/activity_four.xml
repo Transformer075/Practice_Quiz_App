@@ -7,6 +7,19 @@
     android:background="#FF153250"
     tools:context=".activity_four">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Practice and Quiz App"
+        app:titleTextColor="#0629EF" />
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="330dp"
