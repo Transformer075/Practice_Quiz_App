@@ -56,8 +56,6 @@ public class activity_three extends AppCompatActivity {
         toolbar3 = findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar3);
 
-        ActionBar ab = getSupportActionBar();
-        ab.setDisplayHomeAsUpEnabled(true);
 
         Random rand = new Random();
         randomNumber = rand.nextInt(19);

@@ -1,6 +1,7 @@
 package com.example.practicequizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.media.Image;
@@ -24,7 +25,7 @@ public class activity_QuizQuestion4 extends AppCompatActivity {
     RadioGroup radioGroup4;
     Button btn_result;
     int correctAnswerCount4 = 0;
-
+    Toolbar toolbar6;
     boolean go4 = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,9 @@ public class activity_QuizQuestion4 extends AppCompatActivity {
         btn_radio4_3 = findViewById(R.id.btn_radio4_3);
         btn_result = findViewById(R.id.btn_result);
         radioGroup4 = findViewById(R.id.radioGroup4);
+
+        toolbar6 = findViewById(R.id.toolbar6);
+        setSupportActionBar(toolbar6);
 
         Intent intent = getIntent();
         correctAnswerCount4 = intent.getIntExtra("correctAnswerCount4", 0);

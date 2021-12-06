@@ -1,6 +1,8 @@
 package com.example.practicequizapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +13,7 @@ import android.widget.TextView;
 public class activity_result extends AppCompatActivity {
     TextView textView;
     Button btn_result;
-
+    Toolbar toolbar7;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +21,10 @@ public class activity_result extends AppCompatActivity {
 
         textView = findViewById(R.id.result);
         btn_result = findViewById(R.id.button);
+        toolbar7 = findViewById(R.id.toolbar7);
+        setSupportActionBar(toolbar7);
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
         String message ="Correct Answers: " + intent.getIntExtra("correctAnswerCount4", 0);
