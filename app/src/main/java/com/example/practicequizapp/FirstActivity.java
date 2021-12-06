@@ -1,6 +1,7 @@
 package com.example.practicequizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.media.Image;
@@ -14,7 +15,7 @@ public class FirstActivity extends AppCompatActivity {
     Button btn_Practice;
     Button btn_Quiz;
     Button btn_repo;
-
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,7 @@ public class FirstActivity extends AppCompatActivity {
         btn_Practice = findViewById(R.id.btn_secondActivity);
         btn_Quiz = findViewById(R.id.btn_thirdActivity);
         btn_repo = findViewById(R.id.btn_repo);
+        toolbar = findViewById(R.id.toolbar);
         Intent intent;
         btn_Practice.setOnClickListener(new View.OnClickListener() {
             @Override
